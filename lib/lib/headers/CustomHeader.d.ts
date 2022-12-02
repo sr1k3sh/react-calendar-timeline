@@ -9,15 +9,18 @@ export class CustomHeader extends React.Component<any, any, any> {
         canvasTimeEnd: PropTypes.Validator<number>;
         canvasWidth: PropTypes.Validator<number>;
         showPeriod: PropTypes.Validator<(...args: any[]) => any>;
-        timelineWidth: PropTypes.Validator<number>;
         headerData: PropTypes.Requireable<object>;
         getLeftOffsetFromDate: PropTypes.Validator<(...args: any[]) => any>;
         height: PropTypes.Validator<number>;
     };
-    static getDerivedStateFromProps(props: any, state: any): {
-        intervals: any[];
-    } | undefined;
     constructor(props: any);
+    getHeaderIntervals: ({ canvasTimeStart, canvasTimeEnd, unit, timeSteps, getLeftOffsetFromDate }: {
+        canvasTimeStart: any;
+        canvasTimeEnd: any;
+        unit: any;
+        timeSteps: any;
+        getLeftOffsetFromDate: any;
+    }) => any[];
     getRootProps: (props?: {}) => {
         style: any;
     };
