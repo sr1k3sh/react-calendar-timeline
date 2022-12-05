@@ -10,6 +10,7 @@ export default class ReactCalendarTimeline extends React.Component<any, any, any
         itemHeightRatio: PropTypes.Requireable<number>;
         minZoom: PropTypes.Requireable<number>;
         maxZoom: PropTypes.Requireable<number>;
+        buffer: PropTypes.Requireable<number>;
         clickTolerance: PropTypes.Requireable<number>;
         canChangeGroup: PropTypes.Requireable<boolean>;
         canMove: PropTypes.Requireable<boolean>;
@@ -109,6 +110,7 @@ export default class ReactCalendarTimeline extends React.Component<any, any, any
         minResizeWidth: number;
         lineHeight: number;
         itemHeightRatio: number;
+        buffer: number;
         minZoom: number;
         maxZoom: number;
         clickTolerance: number;
@@ -200,11 +202,23 @@ export default class ReactCalendarTimeline extends React.Component<any, any, any
         };
         selected: null;
     };
+    static childContextTypes: {
+        getTimelineContext: PropTypes.Requireable<(...args: any[]) => any>;
+    };
     static getDerivedStateFromProps(nextProps: any, prevState: any): {
         items: any;
         groups: any;
     };
     constructor(props: any);
+    getChildContext(): {
+        getTimelineContext: () => {
+            timelineWidth: number;
+            visibleTimeStart: any;
+            visibleTimeEnd: any;
+            canvasTimeStart: number;
+            canvasTimeEnd: number;
+        };
+    };
     getTimelineContext: () => {
         timelineWidth: number;
         visibleTimeStart: any;
@@ -212,6 +226,7 @@ export default class ReactCalendarTimeline extends React.Component<any, any, any
         canvasTimeStart: number;
         canvasTimeEnd: number;
     };
+    getTimelineUnit: () => string;
     getSelected(): any;
     hasSelectedItem(): boolean;
     isItemSelected(itemId: any): any;
