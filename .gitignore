@@ -1,19 +1,8 @@
-node_modules
-bower_components
-.DS_Store
-*.log
-.idea
-.sass-cache
-modules
-build
-gh-pages
-#/lib
-package-lock.json
-# vscode stuff
-.vscode
+# Ignore everything
+*
 
-# code coverage
-coverage
-
-*.orig
-.npmrc
+# But not these files...
+!lib
+!src
+#!template.latex
+# etc...
