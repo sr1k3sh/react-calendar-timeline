@@ -16,7 +16,7 @@ import Timeline, {
 import generateFakeData from '../generate-fake-data'
 
 var minTime = getTime(add(new Date(), {months: -6}))
-var maxTime = getTime(add(new Date(), {months: 6}))
+var maxTime = getTime(add(new Date(), {months: -6}))
 
 var keys = {
   groupIdKey: 'id',

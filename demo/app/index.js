@@ -12,7 +12,6 @@ const demos = {
   linkedTimelines: require('./demo-linked-timelines').default,
   elementResize: require('./demo-element-resize').default,
   renderers: require('./demo-renderers').default,
-  verticalClasses: require('./demo-vertical-classes').default,
   customItems: require('./demo-custom-items').default,
   customHeaders: require('./demo-headers').default,
   customInfoLabel: require('./demo-custom-info-label').default,
