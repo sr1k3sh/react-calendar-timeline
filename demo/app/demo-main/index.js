@@ -166,7 +166,7 @@ export default class App extends Component {
         onItemDoubleClick={this.handleItemDoubleClick}
         onTimeChange={this.handleTimeChange}
         moveResizeValidator={this.moveResizeValidator}
-        // timeZone={'Asia/Tokyo'}
+        timeZone={'Asia/Tokyo'}
       >
         <TimelineMarkers>
           <TodayMarker />

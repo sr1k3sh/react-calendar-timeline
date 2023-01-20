@@ -165,7 +165,7 @@ export function iterateTimes(start, end, unit,timeZone, timeSteps, callback) {
   }
 
   while (getTime(time) < end) {
-    let nextTime = addMap[unit](time, timeSteps[unit] || 1)
+    let nextTime = addMap[unit](utcToZonedTime(time, timeZone), timeSteps[unit] || 1)
     callback(time, nextTime)
     time = nextTime
   }
