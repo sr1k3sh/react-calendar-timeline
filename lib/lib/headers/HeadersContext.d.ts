@@ -5,6 +5,7 @@ export class TimelineHeadersProvider extends React.Component<any, any, any> {
         leftSidebarWidth: PropTypes.Validator<number>;
         timeSteps: PropTypes.Validator<object>;
         registerScroll: PropTypes.Validator<(...args: any[]) => any>;
+        timeZone: PropTypes.Validator<string>;
     };
     constructor(props: any);
     constructor(props: any, context: any);

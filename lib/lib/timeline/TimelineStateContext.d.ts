@@ -9,6 +9,7 @@ export class TimelineStateProvider extends React.Component<any, any, any> {
         showPeriod: PropTypes.Validator<(...args: any[]) => any>;
         timelineUnit: PropTypes.Validator<string>;
         timelineWidth: PropTypes.Validator<number>;
+        timeZone: PropTypes.Requireable<string>;
     };
     constructor(props: any);
     getTimelineState: () => {

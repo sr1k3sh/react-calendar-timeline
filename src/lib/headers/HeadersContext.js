@@ -24,6 +24,7 @@ export class TimelineHeadersProvider extends React.Component {
     //TODO: maybe this should be skipped?
     timeSteps: PropTypes.object.isRequired,
     registerScroll: PropTypes.func.isRequired,
+    timeZone: PropTypes.string.isRequired
   }
 
 
@@ -33,6 +34,7 @@ export class TimelineHeadersProvider extends React.Component {
       leftSidebarWidth: this.props.leftSidebarWidth,
       timeSteps: this.props.timeSteps,
       registerScroll: this.props.registerScroll,
+      timeZone: this.props.timeZone
     }
     return <Provider value={contextValue}>{this.props.children}</Provider>
   }

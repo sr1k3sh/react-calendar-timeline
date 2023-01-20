@@ -37,6 +37,7 @@ import {
   getSeconds, setSeconds,
   getMilliseconds, setMilliseconds, getTime
 } from 'date-fns'
+import { utcToZonedTime } from 'date-fns-tz'
 import { _get } from './generic'
 
 const startOfMap = {
@@ -155,8 +156,8 @@ export function calculateTimeForXPosition(
   return timeFromCanvasTimeStart + canvasTimeStart
 }
 
-export function iterateTimes(start, end, unit, timeSteps, callback) {
-  let time = startOfMap[unit](new Date(start))
+export function iterateTimes(start, end, unit,timeZone, timeSteps, callback) {
+  let time = startOfMap[unit](utcToZonedTime(start, timeZone).getTime())
 
   if (timeSteps[unit] && timeSteps[unit] > 1) {
     let value = getMap[unit](time)

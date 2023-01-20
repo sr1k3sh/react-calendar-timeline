@@ -5,6 +5,7 @@ export default class ReactCalendarTimeline extends React.Component<any, any, any
         sidebarWidth: PropTypes.Requireable<number>;
         rightSidebarWidth: PropTypes.Requireable<number>;
         dragSnap: PropTypes.Requireable<number>;
+        timeZone: PropTypes.Requireable<string>;
         minResizeWidth: PropTypes.Requireable<number>;
         lineHeight: PropTypes.Requireable<number>;
         itemHeightRatio: PropTypes.Requireable<number>;
@@ -111,6 +112,7 @@ export default class ReactCalendarTimeline extends React.Component<any, any, any
         lineHeight: number;
         itemHeightRatio: number;
         buffer: number;
+        timeZone: string;
         minZoom: number;
         maxZoom: number;
         clickTolerance: number;

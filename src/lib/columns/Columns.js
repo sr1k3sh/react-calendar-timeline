@@ -38,6 +38,7 @@ const getMap = {
 class Columns extends Component {
   static propTypes = {
     ...passThroughPropTypes,
+    timeZone: PropTypes.string,
     getLeftOffsetFromDate: PropTypes.func.isRequired
   }
 
@@ -64,7 +65,8 @@ class Columns extends Component {
       timeSteps,
       height,
       verticalLineClassNamesForTime,
-      getLeftOffsetFromDate
+      getLeftOffsetFromDate,
+      timeZone
     } = this.props
     const ratio = canvasWidth / (canvasTimeEnd - canvasTimeStart)
 
@@ -74,6 +76,7 @@ class Columns extends Component {
       canvasTimeStart,
       canvasTimeEnd,
       minUnit,
+      timeZone,
       timeSteps,
       (time, nextTime) => {
         const minUnitValue = getMap[minUnit === 'day' ? 'date' : minUnit](time)

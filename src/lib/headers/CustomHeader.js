@@ -21,6 +21,7 @@ export class CustomHeader extends React.Component {
     headerData: PropTypes.object,
     getLeftOffsetFromDate: PropTypes.func.isRequired,
     height: PropTypes.number.isRequired,
+    timeZone: PropTypes.string,
   }
   constructor(props) {
     super(props)
@@ -29,6 +30,7 @@ export class CustomHeader extends React.Component {
       canvasTimeEnd,
       canvasWidth,
       unit,
+      timeZone,
       timeSteps,
       showPeriod,
       getLeftOffsetFromDate
@@ -39,6 +41,7 @@ export class CustomHeader extends React.Component {
       canvasTimeEnd,
       canvasWidth,
       unit,
+      timeZone,
       timeSteps,
       showPeriod,
       getLeftOffsetFromDate
@@ -79,6 +82,7 @@ export class CustomHeader extends React.Component {
         canvasTimeEnd,
         canvasWidth,
         unit,
+        timeZone,
         timeSteps,
         showPeriod,
         getLeftOffsetFromDate
@@ -89,6 +93,7 @@ export class CustomHeader extends React.Component {
         canvasTimeEnd,
         canvasWidth,
         unit,
+        timeZone,
         timeSteps,
         showPeriod,
         getLeftOffsetFromDate
@@ -102,6 +107,7 @@ export class CustomHeader extends React.Component {
     canvasTimeStart,
     canvasTimeEnd,
     unit,
+    timeZone,
     timeSteps,
     getLeftOffsetFromDate
   }) => {
@@ -110,6 +116,7 @@ export class CustomHeader extends React.Component {
       canvasTimeStart,
       canvasTimeEnd,
       unit,
+      timeZone,
       timeSteps,
       (startTime, endTime) => {
         const left = getLeftOffsetFromDate(getTime(startTime))

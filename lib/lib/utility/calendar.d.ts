@@ -26,7 +26,7 @@ export function calculateXPositionForTime(canvasTimeStart: number, canvasTimeEnd
  * @returns {number}
  */
 export function calculateTimeForXPosition(canvasTimeStart: number, canvasTimeEnd: number, canvasWidth: number, leftOffset: number): number;
-export function iterateTimes(start: any, end: any, unit: any, timeSteps: any, callback: any): void;
+export function iterateTimes(start: any, end: any, unit: any, timeZone: any, timeSteps: any, callback: any): void;
 export function getMinUnit(zoom: any, width: any, timeSteps: any): string;
 export function getNextUnit(unit: any): any;
 /**

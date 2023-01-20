@@ -38,6 +38,7 @@ export default class ReactCalendarTimeline extends Component {
     sidebarWidth: PropTypes.number,
     rightSidebarWidth: PropTypes.number,
     dragSnap: PropTypes.number,
+    timeZone: PropTypes.string,
     minResizeWidth: PropTypes.number,
     lineHeight: PropTypes.number,
     itemHeightRatio: PropTypes.number,
@@ -166,7 +167,7 @@ export default class ReactCalendarTimeline extends Component {
     lineHeight: 30,
     itemHeightRatio: 0.65,
     buffer: 3,
-
+    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     minZoom: 60 * 60 * 1000, // 1 hour
     maxZoom: 5 * 365.24 * 86400 * 1000, // 5 years
 
@@ -744,6 +745,7 @@ export default class ReactCalendarTimeline extends Component {
         timeSteps={timeSteps}
         height={height}
         verticalLineClassNamesForTime={this.props.verticalLineClassNamesForTime}
+        timeZone={this.props.timeZone}
       />
     )
   }
@@ -936,7 +938,7 @@ export default class ReactCalendarTimeline extends Component {
       selected: this.getSelected(),
       height: height,
       minUnit: minUnit,
-      timeSteps: timeSteps
+      timeSteps: timeSteps,
     }
 
     return React.Children.map(childArray, child => {
@@ -1053,6 +1055,7 @@ export default class ReactCalendarTimeline extends Component {
         showPeriod={this.showPeriod}
         timelineUnit={minUnit}
         timelineWidth={this.state.width}
+        timeZone={this.props.timeZone}
       >
         <TimelineMarkersProvider>
           <TimelineHeadersProvider
@@ -1060,6 +1063,7 @@ export default class ReactCalendarTimeline extends Component {
             timeSteps={timeSteps}
             leftSidebarWidth={this.props.sidebarWidth}
             rightSidebarWidth={this.props.rightSidebarWidth}
+            timeZone={this.props.timeZone}
           >
             <div
               style={this.props.style}

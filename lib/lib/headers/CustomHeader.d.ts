@@ -12,12 +12,14 @@ export class CustomHeader extends React.Component<any, any, any> {
         headerData: PropTypes.Requireable<object>;
         getLeftOffsetFromDate: PropTypes.Validator<(...args: any[]) => any>;
         height: PropTypes.Validator<number>;
+        timeZone: PropTypes.Requireable<string>;
     };
     constructor(props: any);
-    getHeaderIntervals: ({ canvasTimeStart, canvasTimeEnd, unit, timeSteps, getLeftOffsetFromDate }: {
+    getHeaderIntervals: ({ canvasTimeStart, canvasTimeEnd, unit, timeZone, timeSteps, getLeftOffsetFromDate }: {
         canvasTimeStart: any;
         canvasTimeEnd: any;
         unit: any;
+        timeZone: any;
         timeSteps: any;
         getLeftOffsetFromDate: any;
     }) => any[];

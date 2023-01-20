@@ -14,13 +14,15 @@ class TimelineHeaders extends React.Component {
     className: PropTypes.string,
     calendarHeaderStyle: PropTypes.object,
     calendarHeaderClassName: PropTypes.string,
-    headerRef: PropTypes.func
+    headerRef: PropTypes.func,
+    timeZone: PropTypes.string.isRequired,
   }
 
   static defaultProps = {
     style: {},
     calendarHeaderStyle: {},
     calendarHeaderClassName: "",
+    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
   }
 
   constructor(props) {

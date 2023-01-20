@@ -43,6 +43,7 @@ export class TimelineStateProvider extends React.Component {
     showPeriod: PropTypes.func.isRequired,
     timelineUnit: PropTypes.string.isRequired,
     timelineWidth: PropTypes.number.isRequired,
+    timeZone: PropTypes.string,
   }
 
   constructor(props) {
@@ -54,6 +55,7 @@ export class TimelineStateProvider extends React.Component {
         getLeftOffsetFromDate: this.getLeftOffsetFromDate,
         getDateFromLeftOffsetPosition: this.getDateFromLeftOffsetPosition,
         showPeriod: this.props.showPeriod,
+        timeZone: this.props.timeZone,
       }
     }
   }
