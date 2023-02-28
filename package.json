@@ -1,6 +1,6 @@
 {
-  "name": "@ti-gecko/react-calendar-timeline",
-  "version": "0.30.4",
+  "name": "@r1k3sh/react-calendar-timeline",
+  "version": "1.30.5",
   "description": "react calendar timeline",
   "main": "lib/index.js",
   "scripts": {
@@ -9,21 +9,26 @@
     "lint": "eslint --ext .js --ext .jsx ./src",
     "lint:fix": "prettier-eslint --parser babylon --write \"src/**/*.js\"",
     "prepublish": "npm run build:lib",
-    "push": "npm publish --access public --scope @ti-gecko .",
+    "push": "npm publish --access public --scope r1k3sh .",
     "start": "webpack-dev-server --hot --host 0.0.0.0 --display-modules",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "rimraf": "./node_modules/rimraf/bin.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "files": [
     "lib",
     "src"
   ],
-  "homepage": "https://github.com/ricard33/react-calendar-timeline",
+  "homepage": "https://github.com/sr1k3sh/react-calendar-timeline",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricard33/react-calendar-timeline.git"
+    "url": "https://github.com/sr1k3sh/react-calendar-timeline.git"
   },
-  "author": "Cedric RICARD <ricard33@gmail.com>",
+  "author": "Cedric RICARD <sr1k3sh@gmail.com>",
   "contributors": [
     {
       "name": "Marius Andra",
