@@ -11,4 +11,7 @@ export {default as SidebarHeader} from './lib/headers/SidebarHeader'
 export {default as CustomHeader} from './lib/headers/CustomHeader'
 export {default as DateHeader} from './lib/headers/DateHeader'
 export {default as DateProvider} from './lib/DateProvider'
+export {default as GroupRow} from './lib/row/GroupRow'
+export {default as GroupRows} from './lib/row/GroupRows'
+export {default as Columns} from './lib/columns/Columns'
 export default Timeline
