@@ -1,6 +1,6 @@
 {
   "name": "@r1k3sh/react-calendar-timeline",
-  "version": "1.30.5",
+  "version": "1.30.6",
   "description": "react calendar timeline",
   "main": "lib/index.js",
   "scripts": {
@@ -160,8 +160,8 @@
     "prettier-eslint-cli": "^5.0.1",
     "prop-types": "^15.6.2",
     "randomcolor": "^0.5.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.2",
     "rimraf": "^2.6.2",
