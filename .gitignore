@@ -4,5 +4,5 @@
 # But not these files...
 !lib
 !src
-#!template.latex
+!tsconfig.json
 # etc...
