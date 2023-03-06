@@ -82,6 +82,7 @@ export default class ReactCalendarTimeline extends Component {
 
     className: PropTypes.string,
     style: PropTypes.object,
+    outerComponentStyle: PropTypes.object,
 
     keys: PropTypes.shape({
       groupIdKey: PropTypes.string,
@@ -211,6 +212,7 @@ export default class ReactCalendarTimeline extends Component {
     itemTouchSendsClick: false,
 
     style: {},
+    outerComponentStyle: {},
     className: '',
     keys: defaultKeys,
     timeSteps: defaultTimeSteps,
@@ -1067,7 +1069,7 @@ export default class ReactCalendarTimeline extends Component {
               className={`react-calendar-timeline ${this.props.className}`}
             >
               {this.renderHeaders()}
-              <div style={outerComponentStyle} className="rct-outer">
+              <div style={Object.assign({}, outerComponentStyle, this.props.outerComponentStyle)} className="rct-outer">
                 {sidebarWidth > 0 ? this.sidebar(height, groupHeights) : null}
                 <ScrollElement
                   scrollRef={this.getScrollElementRef}
