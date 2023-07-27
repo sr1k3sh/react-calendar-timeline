@@ -1,6 +1,6 @@
 {
   "name": "@r1k3sh/react-calendar-timeline",
-  "version": "1.30.24",
+  "version": "1.30.25",
   "description": "react calendar timeline",
   "main": "lib/index.js",
   "scripts": {
